@@ -3,7 +3,8 @@ define([
   "backbone",
   "marionette",
   "radio",
-  "underscore"
-], function(){
-    alert( "mike" );
-  });
+  "underscore",
+  "js/radio.communicator"
+], function( Communicator ){
+    
+});
