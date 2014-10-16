@@ -1,0 +1,22 @@
+{
+  "name": "radio_communicator",
+  "version": "0.0.0",
+  "description": "Simple AMD radio communicator",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone.radio": "~0.7.0",
+    "backbone": "~1.1.2",
+    "bootstrap": "~3.2.0",
+    "html5-boilerplate": "~4.3.0",
+    "marionette": "~2.2.1",
+    "underscore": "~1.7.0"
+  }
+}
