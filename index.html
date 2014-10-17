@@ -23,17 +23,46 @@
                     <h1 style="text-align:center;">Radio Example</h1>
                 </div>
             </div>
+            <!-- PUB/SUB -->
+            <div class="row">
+                <div class="col-md-4">
+                    <button type="button" class="btn btn-primary publisher">Publish</button>
+                </div>
+                <div class="col-md-8">
+                    <button type="button" class="btn btn-primary subscriber">Waiting</button>
+                    <button type="button" class="btn btn-primary subscriber">Waiting</button>
+                    <button type="button" class="btn btn-primary subscriber">Waiting</button>
+                    <button type="button" class="btn btn-primary subscriber">Waiting</button>
+                    <button type="button" class="btn btn-primary subscriber">Waiting</button>
+
+                </div>
+            </div>
+
+            <!-- COMMAND/COMPLY -->
             <div class="row">
                 <div class="col-md-8">
-                    <button type="button" class="btn btn-primary">Publish</button>
+                    <button type="button" class="btn btn-primary commander">Commander</button>
+                    <button type="button" class="btn btn-primary commander">Commander</button>
+                    <button type="button" class="btn btn-primary commander">Commander</button>
+                    <button type="button" class="btn btn-primary commander">Commander</button>
+                    <button type="button" class="btn btn-primary commander">Commander</button>
                 </div>
-                <div class="col-md4">
-                    <button type="button" class="btn btn-primary">Waiting</button>
-                    <button type="button" class="btn btn-primary">Waiting</button>
-                    <button type="button" class="btn btn-primary">Waiting</button>
-                    <button type="button" class="btn btn-primary">Waiting</button>
-                    <button type="button" class="btn btn-primary">Waiting</button>
+                <div class="col-md-4">
+                    <button type="button" class="btn btn-primary complier">Complier</button>
+                </div>
+            </div>
 
+            <!-- REQUEST/RESPONSE -->
+            <div class="row">
+                <div class="col-md-8">
+                    <button type="button" class="btn btn-primary requester">Requester</button>
+                    <button type="button" class="btn btn-primary requester">Requester</button>
+                    <button type="button" class="btn btn-primary requester">Requester</button>
+                    <button type="button" class="btn btn-primary requester">Requester</button>
+                    <button type="button" class="btn btn-primary requester">Requester</button>
+                </div>
+                <div class="col-md-4">
+                    <button type="button" class="btn btn-primary replier">Replier</button>
                 </div>
             </div>
         </div>
@@ -41,3 +70,7 @@
         <script src="/bower_components/requirejs/require.js" data-main="js/init"></script>
     </body>
 </html>
+
+
+
+

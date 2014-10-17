@@ -1,23 +1,25 @@
 define([
-	"radio",
-	"marionette"
-],function( Radio, Marionette ) {
+	"radio"
+],function( Radio ) {
 
-		console.log( Radio );
-
-		/*var Communicator = Backbone.Marionette.Controller.extend({
+		var Communicator = Marionette.Controller.extend({
 			initialize: function( options ) {
-				// create a pub sub
-				this.mediator = new Backbone.Wreqr.EventAggregator();
+				this.channels = {};
+			},
 
-				//create a req/res
-				this.reqres = new Backbone.Wreqr.RequestResponse();
+			// creates a new channel
+			_createChannel: function( channel ){
+				this.channels[ channel ] = Radio.channel( channel );
+			},
 
-				// create commands
-				this.command = new Backbone.Wreqr.Commands();
+			// gets a channel
+			getChannel: function( channel ){
+				if( !this.channels[ channel ] ) {
+					this._createChannel( channel );
+				}
+				return this.channels[ channel ];
 			}
 		});
 
-		return new Communicator();*/
-        
+		return new Communicator();
 	});
