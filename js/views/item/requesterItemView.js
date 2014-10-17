@@ -1,5 +1,5 @@
 define([
-  "appConfig",
+  "js/appConfig",
   "js/radio.communicator"
 ], function( appConfig, Communicator ){
 
@@ -15,8 +15,8 @@ define([
 
 		handleRequest: function( e ){
 			e.preventDefault();
-			console.log( "handleRequest" );
-			// publish event via communivator
+			var count = Communicator.getChannel( appConfig.channels.GLOBAL ).request( appConfig.events.TEST_REQUEST );
+			this.$el.text( this.$el.text() + " " + count );
 		}
 	});
 });

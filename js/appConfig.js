@@ -1,6 +1,8 @@
-define([],
+define([
+	"underscore"
+	],
 
-	function() {
+	function( _ ) {
 
 		var page = document.location.pathname;
 
@@ -16,7 +18,8 @@ define([],
 			events: {
 				TEST_PUBLISH: "TEST_PUBLISH",
 				TEST_REQUEST: "TEST_REQUEST",
-				TEST_COMMAND: "TEST_COMMAND"
+				TEST_COMMAND: "TEST_COMMAND",
+				
 			}
 			
 		};

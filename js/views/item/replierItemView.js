@@ -1,5 +1,5 @@
 define([
-  "appConfig",
+  "js/appConfig",
   "js/radio.communicator"
 ], function( appConfig, Communicator ){
 
@@ -7,7 +7,13 @@ define([
 
 		initialize: function() {
 			console.log( "Replier ItemView initialized" );
-			// listen for publish events
+			this.counter = 0;
+			Communicator.getChannel( appConfig.channels.GLOBAL ).reply( appConfig.events.TEST_REQUEST, _.bind( this.handleReply, this));
 		},
+
+		handleReply: function(){
+
+			return ++this.counter;
+		}
 	});
 });

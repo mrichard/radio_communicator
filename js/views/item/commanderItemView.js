@@ -1,5 +1,5 @@
 define([
-  "appConfig",
+  "js/appConfig",
   "js/radio.communicator"
 ], function( appConfig, Communicator ){
 
@@ -15,8 +15,7 @@ define([
 
 		handleComand: function( e ){
 			e.preventDefault();
-			console.log( "handleComand" );
-			Communicator.getChannel( appConfig.channels.GLOBAL ).command( appConfig.events.TEST_COMMAND );
+			Communicator.getChannel( appConfig.channels.GLOBAL ).command( appConfig.events.TEST_COMMAND);
 		}
 	});
 });

@@ -4,7 +4,7 @@ define([
   "marionette",
   "radio",
   "underscore",
-  "appConfig",
+  "js/appConfig",
   "js/views/item/publisherItemView",
   "js/views/item/subscriberItemView",
   "js/views/item/commanderItemView",
@@ -12,17 +12,18 @@ define([
   "js/views/item/requesterItemView",
   "js/views/item/replierItemView"
 
-], function( appConfig, PublisherItemView, SubscriberItemView, CommanderItemView, ComplierItemView, RequesterItemView, ReplierItemView ){
+], function( $, B, M, Radio, _, appConfig, PublisherItemView, SubscriberItemView, CommanderItemView, ComplierItemView, RequesterItemView, ReplierItemView ){
 
     // get the .publisher elements and build a view for each
-    $( ".publisher" ).each( function(){
+    $( ".publisher" ).each( function( index, element ){
+      console.log( "in each" );
         new PublisherItemView({
           el: $(this)
         });
     });
 
     // get the .subscriber elements and build a view for each
-    $( ".subscriber" ).each( function(){
+    $( ".subscriber" ).each( function( index, element ){
       new SubscriberItemView({
         el: $(this)
       });
@@ -30,7 +31,7 @@ define([
 
 
     // get the command elements and build a view for each
-    $( ".commander" ).each( function(){
+    $( ".commander" ).each( function( index, element ){
         new CommanderItemView({
           el: $(this)
         });
@@ -38,15 +39,15 @@ define([
 
 
     // get the comply elements and build a view for each
-    $( ".complier" ).each( function(){
+    $( ".complier" ).each( function( index, element ){
         new ComplierItemView({
-          el: $(this) // needs a model
+          el: $(this)
         });
     });
     
 
     // get the requester elements and build a view for each
-    $( ".requester" ).each( function(){
+    $( ".requester" ).each( function( index, element ){
         new RequesterItemView({
           el: $(this)
         });
@@ -54,7 +55,7 @@ define([
 
 
     // get the replier elements and build a view for each
-    $( ".replier" ).each( function(){
+    $( ".replier" ).each( function( index, element ){
         new ReplierItemView({
           el: $(this)
         });

@@ -1,5 +1,5 @@
 define([
-	"appConfig",
+	"js/appConfig",
   	"js/radio.communicator"
 ], function( appConfig, Communicator ){
 

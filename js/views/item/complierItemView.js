@@ -1,5 +1,5 @@
 define([
-  "appConfig",
+  "js/appConfig",
   "js/radio.communicator"
 ], function( appConfig, Communicator ){
 
@@ -10,7 +10,7 @@ define([
 			Communicator.getChannel( appConfig.channels.GLOBAL ).comply( appConfig.events.TEST_COMMAND, _.bind( this.handleComply, this));
 		},
 		handleComply: function(){
-			
+			this.$el.text( "complied" );
 		}
 	});
 });

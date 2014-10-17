@@ -1,5 +1,5 @@
 define([
-  "appConfig",
+  "js/appConfig",
   "js/radio.communicator"
 ], function( appConfig, Communicator ){
 
@@ -15,8 +15,6 @@ define([
 
 		handlePublish: function( e ){
 			e.preventDefault();
-			console.log( "handlePublish" );
-			// publish event via communivator
 			Communicator.getChannel( appConfig.channels.GLOBAL ).trigger( appConfig.events.TEST_PUBLISH );
 		}
 	});
