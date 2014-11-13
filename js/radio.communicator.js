@@ -2,15 +2,15 @@
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD
-        define(['radio'], factory);
+        define([ 'backbone', 'marionette', 'radio'], factory);
     } else if (typeof exports === 'object') {
         // Node(commonjs)
-        module.exports = factory(require('b'));
+        module.exports = factory( require('backbone'), require('marionette'), require('radio') );
     } else {
         // Browser globals (root is window)
-        root.communicator = factory(root.b);
+        root.communicator = factory( root.backbone, root.marionette, root.radio );
     }
-}(this, function ( radio ) {
+}(this, function ( Backbone, Marionette, Radio ) {
 
 	// communication controller
 	// wraps Radio

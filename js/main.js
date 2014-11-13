@@ -1,10 +1,5 @@
 define([
   "jquery",
-  "backbone",
-  "marionette",
-  "radio",
-  "underscore",
-  "js/appConfig",
   "js/views/item/publisherItemView",
   "js/views/item/subscriberItemView",
   "js/views/item/commanderItemView",
@@ -12,7 +7,7 @@ define([
   "js/views/item/requesterItemView",
   "js/views/item/replierItemView"
 
-], function( $, B, M, Radio, _, appConfig, PublisherItemView, SubscriberItemView, CommanderItemView, ComplierItemView, RequesterItemView, ReplierItemView ){
+], function( $, PublisherItemView, SubscriberItemView, CommanderItemView, ComplierItemView, RequesterItemView, ReplierItemView ){
 
     // get the .publisher elements and build a view for each
     $( ".publisher" ).each( function( index, element ){
